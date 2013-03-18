@@ -1,0 +1,205 @@
+@font-face {font-family:"RexBold"; src:url("../fonts/rex_bold-webfont.eot"); src:url("../fonts/rex_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rex_bold-webfont.woff") format("woff"), url("../fonts/rex_bold-webfont.ttf") format("truetype"), url("../fonts/rex_bold-webfont.svg#rex_bold_bold") format("svg"); font-weight:normal; font-style:normal}
+
+html {min-width:1000px}
+
+body {min-width:1000px; margin:0; padding:0; font:14px/16px arial, helvetica, sans-serif; color:#444; background:#fefdfd url(../images/bg.png) repeat-y center top}
+
+a {color:#444; outline:none}
+a:hover {color:#6172b1}
+
+img {border:none}
+
+.wrapper {min-width:1000px; background:url(../images/bg-top.png) no-repeat center top}
+.wrapper-inner {width:940px; margin:0 auto; padding:26px 0 29px 0}
+
+.header {height:206px; position:relative; background:url(../images/header.png); padding:36px 0 0 0}
+.header-name {text-align:center; font:36px/46px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:0 2px 0 rgba(15, 23, 53, .62); word-spacing:7px; padding:0 0 4px 0}
+.header-name strong {font-weight:normal; display:inline-block; position:relative}
+.header-name strong:before {content:""; display:block; position:absolute; left:-88px; top:21px; width:58px; height:3px; background:#95a4d9}
+.header-name strong:after {content:""; display:block; position:absolute; right:-88px; top:21px; width:58px; height:3px; background:#95a4d9}
+.header-name span {font-size:43px}
+.header-text {text-align:center; width:300px; margin:0 auto; background:url(../images/header-text.png) no-repeat center top; font-style:italic; font-size:17px; line-height:17px; color:#caddfe; padding:17px 0 0 0}
+.header-contacts {text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:22px 0 0 0}
+.header-contacts-email {display:inline-block; vertical-align:middle; font:18px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0}
+.header-contacts-email a {color:#fff}
+.header-contatcs-email a:hover {color:#fff; text-decoration:none}
+.header-contacts-sep {display:inline-block; vertical-align:middle; width:9px; height:9px; background:url(../images/header-contacts-sep.png); margin:0 30px}
+.header-contacts-phones {display:inline-block; vertical-align:middle; font:21px/24px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:0 1px 0 #000; letter-spacing:0}
+.header-contacts-time {display:inline-block; vertical-align:middle; font:18px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0; color:#fff}
+.header-contacts-time span {font-size:16px}
+
+.advantages {padding:21px 0 0 0}
+.advantages-tabs {width:100%; height:56px; background:#d6d6d6; text-align:center; position:relative; z-index:2}
+.advantages-tabs:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.advantages-tabs ul {display:inline-block; position:relative; vertical-align:top; margin:0; padding:0; list-style:none; font:24px/56px "RexBold", arial, helvetica, sans-serif}
+.advantages-tabs ul span {font-size:28px}
+.advantages-tabs ul li {float:left; margin:0; padding:0 50px; position:relative; height:56px}
+.advantages-tabs ul li.active {margin-top:-5px; padding-top:5px; padding-bottom:1px; border-bottom:3px solid #418176; background:#549589}
+.advantages-tabs ul li.active a,
+.advantages-tabs ul li.active a:hover {color:#fff; text-decoration:none; text-shadow:0 1px 0 #2a6a66; cursor:default}
+.advantages-tabs ul li.active:after {content:""; display:block; width:19px; height:13px; background:url(../images/advantages-tabs.png); position:absolute; left:50%; margin-left:-9px; bottom:-13px}
+
+.advantages-container {height:181px; position:relative; background:#f2f2f2}
+.advantages-content {display:none; text-align:center; font-size:0; line-height:0; letter-spacing:-5px; position:absolute; left:0; top:0; width:100%}
+.advantages-container .active {display:block}
+.advantage {display:inline-block; vertical-align:top; width:215px}
+.advantages-content:first-child .advantage {width:230px; padding:0 10px}
+.advantages-content+.advantages-content+.advantages-content .advantage {width:230px; padding:0 10px}
+.advantage-icon {padding:34px 0 14px 0}
+.advantage-name {font-size:14px; line-height:16px; letter-spacing:0}
+
+.tariffs {padding:58px 0 0 0; background:url(../images/section-sep.png) no-repeat center 27px}
+.tariffs-title {font:30px/32px "RexBold", arial, helvetica, sans-serif; text-align:center}
+.tariffs-anonce {text-align:center; color:#717171; font-size:15px; line-height:17px; padding:5px 0 0 0}
+
+.tafiffs-plans {width:100%; text-align:center; padding:29px 0 0 0}
+.tafiffs-plans:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tafiffs-plans ul {display:inline-block; vertical-align:top; margin:0; padding:0; list-style:none; font-size:0; line-height:0; letter-spacing:-5px}
+.tafiffs-plans ul li {float:left; width:157px; margin:0 4px; cursor:pointer; border-bottom-width:3px; border-bottom-style:solid; height:65px; position:relative}
+.tafiffs-plans ul li.active {margin-top:1px; height:63px}
+.tafiffs-plans ul li.active:after {content:""; display:block; position:absolute; left:50%; bottom:-11px; margin-left:-8px; width:16px; height:11px; background:url(../images/tafiffs-plans.png)}
+.tariffs-plan-title {text-align:center; font:22px/24px "RexBold", arial, helvetica, sans-serif; color:#fff; letter-spacing:0; padding:13px 0 0 0}
+.tafiffs-plans ul li.active .tariffs-plan-title {padding-top:12px}
+.tariffs-plan-price {text-align:center; font-size:14px; line-height:16px; letter-spacing:0; color:#fff}
+
+.tafiffs-plan-1 {background:#80a74d; border-color:#5d8f1e}
+.tafiffs-plan-1.disable {background:#bfd3a6; border-color:#aec78e}
+.tafiffs-plans ul li.tafiffs-plan-1:after {background-position:left top}
+.tafiffs-plan-1:hover {background:#96b866; border-color:#75a331}
+.tafiffs-plan-1.active {background:#80a74d; border-color:#5d8f1e}
+.tafiffs-plan-1 .tariffs-plan-title {text-shadow:1px 1px 0 #407639}
+.tafiffs-plan-1.disable .tariffs-plan-title {text-shadow:1px 1px 0 #60957b}
+.tafiffs-plan-1:hover .tariffs-plan-title {text-shadow:1px 1px 0 #4c824c}
+.tafiffs-plan-1.active .tariffs-plan-title {text-shadow:1px 1px 0 #407639}
+
+.tafiffs-plan-2 {background:#549589; border-color:#32776a}
+.tafiffs-plan-2.disable {background:#a9cac4; border-color:#98bbb4}
+.tafiffs-plans ul li.tafiffs-plan-2:after {background-position:left -11px}
+.tafiffs-plan-2:hover {background:#6faba0; border-color:#4c9084}
+.tafiffs-plan-2.active {background:#549589; border-color:#32776a}
+.tafiffs-plan-2 .tariffs-plan-title {text-shadow:1px 1px 0 #467e7a}
+.tafiffs-plan-2.disable .tariffs-plan-title {text-shadow:1px 1px 0 #558f91}
+.tafiffs-plan-2:hover .tariffs-plan-title {text-shadow:1px 1px 0 #387977}
+.tafiffs-plan-2.active .tariffs-plan-title {text-shadow:1px 1px 0 #467e7a}
+
+.tafiffs-plan-3 {background:#40a1cc; border-color:#2281ab}
+.tafiffs-plan-3.disable {background:#9fd0e5; border-color:#90c0d5}
+.tafiffs-plans ul li.tafiffs-plan-3:after {background-position:left -22px}
+.tafiffs-plan-3:hover {background:#50add3; border-color:#2f90b6}
+.tafiffs-plan-3.active {background:#40a1cc; border-color:#2281ab}
+.tafiffs-plan-3 .tariffs-plan-title {text-shadow:1px 1px 0 #217298}
+.tafiffs-plan-3.disable .tariffs-plan-title {text-shadow:1px 1px 0 #5093aa}
+.tafiffs-plan-3:hover .tariffs-plan-title {text-shadow:1px 1px 0 #287a9c}
+.tafiffs-plan-3.active .tariffs-plan-title {text-shadow:1px 1px 0 #217298}
+
+.tafiffs-plan-4 {background:#3a4c8e; border-color:#1e2e69}
+.tafiffs-plan-4.disable {background:#9ca5c6; border-color:#8e96b4}
+.tafiffs-plans ul li.tafiffs-plan-4:after {background-position:left -33px}
+.tafiffs-plan-4:hover {background:#5063a1; border-color:#30437f}
+.tafiffs-plan-4.active {background:#3a4c8e; border-color:#1e2e69}
+
+.tariffs form {margin:0; padding:0}
+
+.tariff-options {padding:31px 0 10px 0}
+.tariff-option {width:100%; height:31px; position:relative; margin:0 0 1px 0; cursor:pointer}
+.tariff-option.even {background:#f7f7f7}
+.tariff-option.checked-1 {background:#ddedc8}
+.tariff-option.checked-2 {background:#d4e8e4}
+.tariff-option.checked-3 {background:#cce8f4}
+.tariff-option.checked-4 {background:#d8def2}
+.tariff-option:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tariff-option-checkbox {float:left; padding:7px 16px 0 11px}
+.tariff-option-checkbox span {display:block; width:17px; height:17px; position:relative; overflow:hidden; background:url(../images/checkbox.png)}
+.tariff-option:hover .tariff-option-checkbox span {background-position:left -17px}
+.tariff-option.checked .tariff-option-checkbox span {background-position:-17px -17px}
+.tariff-option-checkbox span input {position:absolute; left:-99px; top:-99px}
+.tariff-option-name {float:left; width:768px; line-height:31px}
+.tariff-option-price {float:right; width:113px; line-height:31px; padding:0 15px 0 0; text-align:right; font-size:13px; line-height:31px}
+.tariff-option-price strong {font-size:14px}
+
+.tariff-options-summ {width:100%; margin:0 0 1px 0; height:33px; background:#ddd; position:relative; overflow:hidden}
+.tariff-options-summ:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tariff-options-summ-name {float:left; padding:0 0 0 18px; font-weight:bold; line-height:33px}
+.tariff-options-summ-price {float:right; padding:0 15px 0 0; line-height:33px; font-size:13px}
+.tariff-options-summ-price strong {font-size:18px}
+.tariff-options-summ-price-tariff {text-decoration:line-through}
+
+.tariff-options-summ-tariff {display:none; width:100%; margin:0 0 12px 0; height:33px; background:#d1d8f0; position:relative; overflow:hidden}
+.tariff-options-summ-tariff:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tariff-options-summ-tariff-name {float:left; padding:0 0 0 18px; font-weight:bold; line-height:33px}
+.tariff-options-summ-tariff-price {float:right; padding:0 15px 0 0; line-height:33px; font-size:13px; width:112px; text-align:right}
+.tariff-options-summ-tariff-price strong {font-size:18px}
+.tariff-options-summ-tariff-economy {float:right; line-height:33px}
+
+.tariff-ctrl {width:100%; background:#f0f0ed}
+.tariff-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.tariff-comments {float:left; padding:0 0 22px 20px; width:600px}
+.tariff-comment {display:none}
+.tariff-comments .active {display:block}
+.tariff-comment-title {font-weight:bold; padding:18px 0 10px 0}
+.tariff-comment-row {width:100%; font-size:12px; line-height:14px}
+.tariff-comment-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.tariff-comment-row-name {float:left; width:260px; background:url(../images/tariff-comment-row.png) repeat-x left 10px}
+.tariff-comment-row-name span {display:inline-block; background:#f0f0ed; padding:0 5px 0 0}
+.tariff-comment-row-value {float:right; width:335px}
+
+.tariff-submit {float:right; padding:30px 24px 30px 0}
+.tariff-submit input {vertical-align:top; width:239px; height:56px; margin:0; padding:0 0 0 63px; background:#80a74d url(../images/tariff-submit.png) no-repeat 24px top; border:3px solid #58871c; border-width:0 0 3px 0; cursor:pointer; overflow:visible; text-align:left; font:22px/56px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:1px 1px 0 #407639}
+.tariff-submit-2 input {background:#549589 url(../images/tariff-submit.png) no-repeat 24px -56px; border-color:#32776a; text-shadow:1px 1px 0 #2a6a66}
+.tariff-submit-3 input {background:#40a1cc url(../images/tariff-submit.png) no-repeat 24px -112px; border-color:#2281ab; text-shadow:1px 1px 0 #217298}
+.tariff-submit-4 input {background:#3a4c8e url(../images/tariff-submit.png) no-repeat 24px -168px; border-color:#1e2e69; text-shadow:1px 1px 0 #1e3669}
+
+.principles {padding:56px 0 0 0; background:url(../images/section-sep.png) no-repeat center 34px}
+.principles-title {font:30px/32px "RexBold", arial, helvetica, sans-serif; text-align:center; padding:0 0 13px 0}
+.principles-list {width:930px; margin:0 auto; background:url(../images/principles-list.png) no-repeat center top; padding:29px 0 0 0}
+.principles-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.principles-item {float:left; width:310px; height:172px; text-align:center}
+.principles-item-1 {background:url(../images/principle-1.png) no-repeat center top}
+.principles-item-2 {background:url(../images/principle-2.png) no-repeat center top}
+.principles-item-3 {background:url(../images/principle-3.png) no-repeat center top}
+.principles-item-name {font:21px/29px "RexBold", arial, helvetica, sans-serif; padding:32px 0 0 0}
+.principles-item-name span {font-size:27px}
+.principles-item-name a {color:#4d8b80; text-decoration:none; border-bottom:2px solid #e1e0df}
+.principles-item-name a:hover {border-bottom:none; margin-bottom:2px}
+.principles-item-text {color:#635d58; line-height:19px; padding:15px 0 0 0}
+
+.areas {padding:72px 0 0 0; background:url(../images/section-sep-2.png) no-repeat center 36px}
+.areas-title {font:30px/32px "RexBold", arial, helvetica, sans-serif; text-align:center}
+.areas-text {font-size:15px; line-height:17px; color:#717171; text-align:center; padding:9px 0 33px 0}
+.areas-content {position:relative; margin-right:-10px}
+.areas-list {width:100%}
+.areas-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.area {float:left; width:180px; height:180px; margin:0 10px 10px 0; background:#ececec; text-align:center}
+.area-icon {line-height:90px; height:90px; padding:18px 0 0 0}
+.area-icon img {vertical-align:middle}
+.area-name {font:20px/22px "RexBold", arial, helvetica, sans-serif}
+.area-text {font-size:12px; line-height:14px; color:#8d8d8d; padding:4px 20px 0 20px}
+
+.footer-social {height:24px; margin:27px 0 30px 0; position:relative; text-align:center; font-size:0; line-height:0; letter-spacing:-5px}
+
+.footer-social-like {display:inline-block; vertical-align:top; margin:0 4px; line-height:0; opacity:.74; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=74); letter-spacing:0}
+.footer-social-like:hover {opacity:1; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100)}
+.footer-social-like img,
+.footer-social-like iframe {vertical-align:top}
+
+.footer {height:214px; position:relative; background:#ddd; padding:27px 0 0 0}
+.footer-name {text-align:center; font:29px/37px "RexBold", arial, helvetica, sans-serif; color:#585858; padding:0 0 4px 0; word-spacing:5px}
+.footer-name strong {font-weight:normal; display:inline-block; position:relative}
+.footer-name strong:before {content:""; display:block; position:absolute; left:-78px; top:17px; width:48px; height:3px; background:#c8c8c8}
+.footer-name strong:after {content:""; display:block; position:absolute; right:-78px; top:17px; width:48px; height:3px; background:#c8c8c8}
+.footer-name span {font-size:35px}
+.footer-text {text-align:center; width:300px; margin:0 auto; font-style:italic; line-height:15px; color:#929292; padding:3px 0 0 0}
+.footer-contacts {text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:16px 0 0 0}
+.footer-contacts-email {display:inline-block; vertical-align:middle; font:16px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0}
+.footer-contacts-email a {color:#585858}
+.footer-contatcs-email a:hover {color:#585858; text-decoration:none}
+.footer-contacts-sep {display:inline-block; vertical-align:middle; width:9px; height:9px; background:url(../images/footer-sep.png); margin:0 30px}
+.footer-contacts-phones {display:inline-block; vertical-align:middle; font:19px/22px "RexBold", arial, helvetica, sans-serif; color:#585858; letter-spacing:0}
+.footer-contacts-time {display:inline-block; vertical-align:middle; font:16px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0; color:#585858}
+.footer-contacts-time span {font-size:13px}
+.footer-developer {width:204px; margin:0 auto; font-size:11px; line-height:24px; padding:28px 0 0 0}
+.footer-developer:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.footer-developer-text {float:left; color:#8b8b8b}
+.footer-developer-link {float:right}
+.footer-developer-link a {display:block; width:104px; height:23px; border-bottom:2px solid #427f74; background:#549589; text-align:center; color:#fff; text-decoration:none}
