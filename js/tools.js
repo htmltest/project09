@@ -38,6 +38,11 @@
             $('.tariff-options-summ-tariff-economy span').html(Math.round((Number($('.tariff-options-summ-price strong').html().replace(' ', '')) - Number(curLi.find('span').html().replace(' ', ''))) / Number($('.tariff-options-summ-price strong').html().replace(' ', '')) * 100));
             $('.tariff-comment').hide();
             $('.tariff-comment').eq(curTariff - 1).show();
+
+            $('.order-window-info-tariff').show();
+            $('.order-window-info-services').hide();
+            $('.order-window-info-tariff-name').html(curLi.find('.tariffs-plan-title').html());
+            $('.order-window-info-tariff-cost').html(curLi.find('.tariffs-plan-price span').html());
         });
 
         $('.tariff-option:even').addClass('even');
@@ -53,17 +58,102 @@
             $('.tariff-options-summ-tariff').hide();
             $('.tariff-options-summ-price').removeClass('tariff-options-summ-price-tariff');
             $('.tariff-comment').hide();
+            $('.tariff-submit').removeClass('tariff-submit-1 tariff-submit-2 tariff-submit-3 tariff-submit-4');
+
+            $('.order-window-info-tariff').hide();
+            $('.order-window-info-services').show();
         });
+
+        $('.tariffs form').submit(function() {
+            $('.order-window-form-services').html($('.tariff-options').html());
+            windowOpen($('.order-window').html());
+            return false;
+        });
+
+        recalcSumm();
 
     });
 
     function recalcSumm() {
         var curSumm = 0;
 
-        $('.tariff-option.checked').each(function() {
+        $('.tariff-options .tariff-option.checked').each(function() {
             curSumm += Number($(this).find('.tariff-option-price strong').html().replace(' ', ''));
         });
         $('.tariff-options-summ-price strong').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+        $('.order-window-info-services-count').html($('.tariff-options .tariff-option.checked').length);
+        $('.order-window-info-services-cost').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    }
+
+    // открытие окна
+    function windowOpen(contentWindow) {
+        var windowWidth  = $(window).width();
+        var windowHeight = $(window).height();
+        var curScrollTop = $(window).scrollTop();
+
+        $('body').css({'width': windowWidth, 'height': windowHeight, 'overflow': 'hidden'});
+        $(window).scrollTop(0);
+        $('.wrapper').css({'top': -curScrollTop});
+        $('.wrapper').data('scrollTop', curScrollTop);
+
+        $('body').append('<div class="window"><div class="window-overlay"></div><div class="window-container">' + contentWindow + '<a href="#" class="window-close"></a></div></div>')
+        recalcWindow();
+        var params = {
+            changedEl: '.window select',
+            visRows: 5,
+            scrollArrows: true
+        }
+        cuSel(params);
+        $('.cuselText').each(function() {
+            if ($(this).html() == '') {
+                $(this).html('<em>выберите ответ</em>');
+            }
+        });
+
+        $('.window-overlay').click(function() {
+            windowClose();
+        });
+
+        $('body').bind('keypress keydown', keyDownBody);
+
+        $('.order-window-cancel input').click(function() {
+            windowClose();
+            return false;
+        });
+    }
+
+    // функция обновления позиции окна
+    function recalcWindow() {
+        var windowWidth  = $(window).width();
+        var windowHeight = $(window).height();
+        if ($('.window-container').width() < windowWidth) {
+            $('.window-container').css({'margin-left': -$('.window-container').width() / 2});
+        } else {
+            $('.window-container').css({'left': 0});
+        }
+        if ($('.window-container').height() < windowHeight) {
+            $('.window-container').css({'margin-top': -$('.window-container').height() / 2});
+        } else {
+            $('.window-container').css({'top': 20});
+            $('.window-overlay').css({'min-height': $('.window-container').height() + 40});
+        }
+    }
+
+    // обработка Esc после открытия окна
+    function keyDownBody(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    }
+
+    // закрытие окна
+    function windowClose() {
+        $('body').unbind('keypress keydown', keyDownBody);
+        $('.window').remove();
+        $('.wrapper').css({'top': 'auto'});
+        $('body').css({'width': 'auto', 'height': '100%', 'overflow': 'auto'});
+        var curScrollTop = $('.wrapper').data('scrollTop');
+        $(window).scrollTop(curScrollTop);
     }
 
 })(jQuery);

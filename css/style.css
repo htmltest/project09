@@ -9,7 +9,7 @@ a:hover {color:#6172b1}
 
 img {border:none}
 
-.wrapper {min-width:1000px; background:url(../images/bg-top.png) no-repeat center top}
+.wrapper {min-width:1000px; background:url(../images/bg-top.png) no-repeat center top; position:relative}
 .wrapper-inner {width:940px; margin:0 auto; padding:26px 0 29px 0}
 
 .header {height:206px; position:relative; background:url(../images/header.png); padding:36px 0 0 0}
@@ -22,7 +22,7 @@ img {border:none}
 .header-contacts {text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:22px 0 0 0}
 .header-contacts-email {display:inline-block; vertical-align:middle; font:18px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0}
 .header-contacts-email a {color:#fff}
-.header-contatcs-email a:hover {color:#fff; text-decoration:none}
+.header-contacts-email a:hover {color:#fff; text-decoration:none}
 .header-contacts-sep {display:inline-block; vertical-align:middle; width:9px; height:9px; background:url(../images/header-contacts-sep.png); margin:0 30px}
 .header-contacts-phones {display:inline-block; vertical-align:middle; font:21px/24px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:0 1px 0 #000; letter-spacing:0}
 .header-contacts-time {display:inline-block; vertical-align:middle; font:18px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0; color:#fff}
@@ -145,10 +145,14 @@ img {border:none}
 .tariff-comment-row-value {float:right; width:335px}
 
 .tariff-submit {float:right; padding:30px 24px 30px 0}
-.tariff-submit input {vertical-align:top; width:239px; height:56px; margin:0; padding:0 0 0 63px; background:#80a74d url(../images/tariff-submit.png) no-repeat 24px top; border:3px solid #58871c; border-width:0 0 3px 0; cursor:pointer; overflow:visible; text-align:left; font:22px/56px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:1px 1px 0 #407639}
-.tariff-submit-2 input {background:#549589 url(../images/tariff-submit.png) no-repeat 24px -56px; border-color:#32776a; text-shadow:1px 1px 0 #2a6a66}
-.tariff-submit-3 input {background:#40a1cc url(../images/tariff-submit.png) no-repeat 24px -112px; border-color:#2281ab; text-shadow:1px 1px 0 #217298}
-.tariff-submit-4 input {background:#3a4c8e url(../images/tariff-submit.png) no-repeat 24px -168px; border-color:#1e2e69; text-shadow:1px 1px 0 #1e3669}
+.tariff-submit input {vertical-align:top; width:239px; height:56px; margin:0; padding:0 0 0 63px; background:#80a74d url(../images/tariff-submit.png) no-repeat 24px center; border:3px solid #58871c; border-width:0 0 3px 0; cursor:pointer; overflow:visible; text-align:left; font:22px/56px "RexBold", arial, helvetica, sans-serif; color:#fff; text-shadow:1px 1px 0 #407639}
+.tariff-submit input:hover {background-color:#96b866; border-color:#75a331; text-shadow:1px 1px 0 #4c824c}
+.tariff-submit-2 input {background-color:#549589; border-color:#32776a; text-shadow:1px 1px 0 #2a6a66}
+.tariff-submit-2 input:hover {background-color:#6faba0; border-color:#4c9084; text-shadow:1px 1px 0 #387977}
+.tariff-submit-3 input {background-color:#40a1cc; border-color:#2281ab; text-shadow:1px 1px 0 #217298}
+.tariff-submit-3 input:hover {background-color:#50add3; border-color:#2f90b6; text-shadow:1px 1px 0 #287a9c}
+.tariff-submit-4 input {background-color:#3a4c8e; border-color:#1e2e69; text-shadow:1px 1px 0 #1e3669}
+.tariff-submit-4 input:hover {background-color:#5063a1; border-color:#30437f}
 
 .principles {padding:56px 0 0 0; background:url(../images/section-sep.png) no-repeat center 34px}
 .principles-title {font:30px/32px "RexBold", arial, helvetica, sans-serif; text-align:center; padding:0 0 13px 0}
@@ -193,7 +197,7 @@ img {border:none}
 .footer-contacts {text-align:center; font-size:0; line-height:0; letter-spacing:-5px; padding:16px 0 0 0}
 .footer-contacts-email {display:inline-block; vertical-align:middle; font:16px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0}
 .footer-contacts-email a {color:#585858}
-.footer-contatcs-email a:hover {color:#585858; text-decoration:none}
+.footer-contacts-email a:hover {color:#585858; text-decoration:none}
 .footer-contacts-sep {display:inline-block; vertical-align:middle; width:9px; height:9px; background:url(../images/footer-sep.png); margin:0 30px}
 .footer-contacts-phones {display:inline-block; vertical-align:middle; font:19px/22px "RexBold", arial, helvetica, sans-serif; color:#585858; letter-spacing:0}
 .footer-contacts-time {display:inline-block; vertical-align:middle; font:16px/20px tahoma, geneva, sans-serif; letter-spacing:0; padding:0 0 4px 0; color:#585858}
@@ -203,3 +207,49 @@ img {border:none}
 .footer-developer-text {float:left; color:#8b8b8b}
 .footer-developer-link {float:right}
 .footer-developer-link a {display:block; width:104px; height:23px; border-bottom:2px solid #427f74; background:#549589; text-align:center; color:#fff; text-decoration:none}
+
+.window {position:absolute; left:0; top:0; width:100%; height:100%; z-index:9999; overflow:auto}
+.window-overlay {position:absolute; left:0; top:0; width:100%; height:100%; background:#000; opacity:.5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50)}
+.window-container {position:absolute; left:50%; top:50%; background:#fff; -webkit-box-shadow:0 0 16px rgba(0, 0, 0, .53); -moz-box-shadow:0 0 16px rgba(0, 0, 0, .53); box-shadow:0 0 16px rgba(0, 0, 0, .53); behavior:url(./js/PIE.htc)}
+
+.order-window {display:none}
+.order-window-container {border:10px solid #fff; background:#e5e5e5; width:825px; padding:15px 28px 0 28px}
+.order-window-title {position:relative; background:#465897; padding:13px 0 11px 0; border-bottom:3px solid #364478; text-align:center; text-transform:uppercase; color:#fff; text-shadow:0 1px 0 #18214b; font:25px/25px "RexBold", arial, helvetica, sans-serif}
+.order-window-title div {position:absolute; left:50%; bottom:-11px; width:16px; height:11px; background:url(../images/order-window-title.png); margin-left:-8px}
+.order-window-info {border-bottom:1px solid #cacaca; color:#000; font-size:17px; line-height:33px; height:33px; padding:27px 0 24px 51px; background:url(../images/order-window-info.png) no-repeat 4px 27px}
+.order-window-info strong {color:#465897}
+.order-window-info-tariff {display:none}
+.order-window-form {position:relative; margin-top:-1px; width:840px}
+.order-window-form form {margin:0; padding:0}
+.order-window-form-services {height:0; position:relative; overflow:hidden}
+.order-window-fieldset {padding:26px 0 0 0}
+.order-window-fieldset-title {color:#000; font-weight:bold; font-size:15px; line-height:17px; padding:0 0 10px 0}
+.order-window-form-row {width:100%; padding:0 0 16px 0}
+.order-window-form-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.order-window-form-field {float:left; width:265px; margin:0 15px 0 0}
+.order-window-form-label {font-size:13px; line-height:20px; color:#676767; padding:0 0 2px 0}
+.order-window-form-label span {font-size:20px; position:relative; top:3px}
+.order-window-form-input input {vertical-align:top; border:1px solid #8b8b8b; background:#fff url(../images/order-window-input.png) repeat-x; color:#000; width:247px; height:18px; font:bold 14px/18px arial, helvetica, sans-serif; padding:8px; margin:0; outline:none}
+.order-window-form-input input.error {border-color:#c73b3b}
+.order-window-form-select {height:36px}
+.order-window-form-select select {width:100%}
+.order-window-form-select em {font-weight:normal; color:#8695cc}
+.order-window-form-textarea {border:1px solid #8b8b8b; background:#fff url(../images/order-window-input.png) repeat-x; height:98px; width:823px}
+.order-window-form-textarea textarea {vertical-align:top; border:none; background:none; color:#000; width:807px; height:82px; font:14px/18px arial, helvetica, sans-serif; padding:8px; margin:0; outline:none; resize:none; overflow:auto}
+.order-window-ctrl {width:100%}
+.order-window-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.order-window-captcha-title {float:left; color:#676767; width:78px; font-size:13px; line-height:12px; padding:39px 0 0 0}
+.order-window-captcha-required {float:left; color:#676767; width:27px; font-size:20px; line-height:20px; padding:34px 0 0 0}
+.order-window-captcha {float:left; line-height:0; width:135px; padding:36px 0 0 0}
+.order-window-captcha-new {float:left; line-height:0; text-align:center; width:42px; padding:48px 0 0 0}
+.order-window-captcha-input {float:left; padding:36px 0 0 0; width:148px}
+.order-window-captcha-input .order-window-form-input input {width:130px}
+.order-window-submit {float:right; padding:36px 0 0 12px}
+.order-window-submit input {vertical-align:top; width:178px; height:43px; border:none; border-bottom:3px solid #364478; border-color:#364478; color:#fff; text-shadow:0 1px 0 #18214b; background:#465897; font:17px/43px "RexBold", arial, helvetica, sans-serif; padding:0; margin:0; outline:none; cursor:pointer; text-transform:uppercase}
+.order-window-submit input:hover {background:#3a4c8e; border-color:#1e2e69}
+.order-window-cancel {float:right; padding:36px 0 0 0}
+.order-window-cancel input {vertical-align:top; width:96px; height:43px; border:none; border-bottom:3px solid #7d7d7d; border-color:#7d7d7d; color:#fff; text-shadow:0 1px 0 #606060; background:#989898; font:17px/43px "RexBold", arial, helvetica, sans-serif; padding:0; margin:0; outline:none; cursor:pointer; text-transform:uppercase}
+.order-window-cancel input:hover {background:#938a82}
+.order-window-hint {font-size:12px; line-height:20px; color:#676767; padding:11px 0 18px 0}
+.order-window-hint span {font-size:20px; position:relative; top:3px}
+.order-window-error {height:39px; background:#cd6363; color:#fff; text-align:center; font-weight:bold; font-size:14px; line-height:39px}

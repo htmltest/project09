@@ -4,8 +4,10 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Лариса Николаевна Гарамова</title>
         <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/cusel.css" type="text/css" />
 
         <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/cusel-fixed-min-2.5.js"></script>
         <script type="text/javascript" src="js/tools.js"></script>
     </head>
 
@@ -383,7 +385,7 @@
 
                 <!-- footer social -->
                 <div class="footer-social">
-                    <div class="footer-social-like">
+<!--                    <div class="footer-social-like">
                         <g:plusone size="medium"></g:plusone>
                         <script type="text/javascript">
                             window.___gcfg = {lang: 'ru'};
@@ -412,13 +414,13 @@
                         <script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>
                         <script type="text/javascript"><!--
                         document.write(VK.Share.button({url: "http://ya.ru"},{type: "button", text: "Мне нравится"}));
-                        --></script>
+                        --><!--</script>
                     </div>
 
                     <div class="footer-social-like">
                         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ya.ru" data-lang="ru">Твитнуть</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    </div>
+                    </div>-->
                 </div>
                 <!-- footer social END -->
 
@@ -443,6 +445,123 @@
             </div>
         </div>
         <!-- wrapper END -->
+
+        <!-- order window -->
+        <div class="order-window">
+            <div class="order-window-container">
+                <div class="order-window-title">Заявка<div></div></div>
+                <div class="order-window-info order-window-info-tariff">Вы выбрали: тарифный план <strong>«<span class="order-window-info-tariff-name"></span>»</strong>, стоимостью <strong><span class="order-window-info-tariff-cost"></span> рублей / ежемесячно</strong></div>
+                <div class="order-window-info order-window-info-services">Вы выбрали: <strong><span class="order-window-info-services-count">0</span> услуг</strong> на общую сумму <strong><span class="order-window-info-services-cost">0</span> рублей</strong></div>
+                <div class="order-window-form">
+                    <form action="#" method="post">
+                        <div class="order-window-form-services"></div>
+                        <div class="order-window-error">Вы забыли указать город!</div>
+                        <div class="order-window-fieldset">
+                            <div class="order-window-fieldset-title">1. Контакты</div>
+                            <div class="order-window-form-row">
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Контактное лицо <span>*</span></div>
+                                    <div class="order-window-form-input"><input type="text" name="name" value="Сергей Иванов" /></div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Адрес электронной почты <span>*</span></div>
+                                    <div class="order-window-form-input"><input type="text" name="email" value="ivanchenko@mail.ru" /></div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Контактный телефон <span>*</span></div>
+                                    <div class="order-window-form-input"><input type="text" name="phone" value="" /></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-window-fieldset">
+                            <div class="order-window-fieldset-title">2. Информация об организации</div>
+                            <div class="order-window-form-row">
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Город <span>*</span></div>
+                                    <div class="order-window-form-input"><input type="text" name="city" value="" class="error" /></div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Количество человек в штате <span>*</span></div>
+                                    <div class="order-window-form-input"><input type="text" name="staff" value="12" /></div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Кто ведет первичную документацию <span>*</span></div>
+                                    <div class="order-window-form-select">
+                                        <select name="select1">
+                                            <option value="0" addTags="<em>выберите ответ</em>"></option>
+                                            <option value="1" selected="selected">Силами организации</option>
+                                            <option value="2">Необходим бухглалтер</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-window-form-row">
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Сфера деятельности <span>*</span></div>
+                                    <div class="order-window-form-select">
+                                        <select name="select3">
+                                            <option value="0" addTags="<em>выберите ответ</em>"></option>
+                                            <option value="1">ЖКХ</option>
+                                            <option value="2">Строительство</option>
+                                            <option value="3" selected="selected">Торговля</option>
+                                            <option value="4">Швейная промышленность</option>
+                                            <option value="5">Туриcтическая деятельность</option>
+                                            <option value="6">Издательство</option>
+                                            <option value="7">Полиграфия</option>
+                                            <option value="8">Общественное питание</option>
+                                            <option value="9">Комиссионная торговля</option>
+                                            <option value="10">Ценные бумаги</option>
+                                            <option value="11">Медицина</option>
+                                            <option value="12">Сельское хозяйство</option>
+                                            <option value="13">Гостиничный бизнес</option>
+                                            <option value="14">Автотранспорт</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Кто ведет клиент-банк</div>
+                                    <div class="order-window-form-select">
+                                        <select name="select3">
+                                            <option value="0" addTags="<em>выберите ответ</em>"></option>
+                                            <option value="1">Силами организации</option>
+                                            <option value="2" selected="selected">Необходим бухглалтер</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="order-window-form-field">
+                                    <div class="order-window-form-label">Наличие бухгалтерской программы</div>
+                                    <div class="order-window-form-select">
+                                        <select name="select4">
+                                            <option value="0" addTags="<em>выберите ответ</em>"></option>
+                                            <option value="1">Нет</option>
+                                            <option value="2">Есть</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-window-fieldset">
+                            <div class="order-window-fieldset-title">3. Сопроводительное письмо</div>
+                            <div class="order-window-form-textarea"><textarea name="message" cols="10" rows="10">Здравствуйте, уважаемая Лариса Николаевна ..</textarea></div>
+                        </div>
+                        <div class="order-window-ctrl">
+                            <div class="order-window-captcha-title">Введите код c&nbsp;картинки</div>
+                            <div class="order-window-captcha-required">*</div>
+                            <div class="order-window-captcha"><img src="files/captcha.png" alt="" width="135" height="34" /></div>
+                            <div class="order-window-captcha-new"><a href="#"><img src="images/captcha-new.png" alt="" width="17" height="14" /></a></div>
+                            <div class="order-window-captcha-input">
+                                <div class="order-window-form-input"><input type="text" name="city" value="" /></div>
+                            </div>
+                            <div class="order-window-submit"><input type="submit" value="Отправить заявку" /></div>
+                            <div class="order-window-cancel"><input type="reset" value="Отмена" /></div>
+                        </div>
+                        <div class="order-window-hint"><span>*</span> —  отмеченные поля являются обязательными для заполнения</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- order window END -->
 
     </body>
 </html>
