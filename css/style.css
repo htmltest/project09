@@ -122,15 +122,17 @@ img {border:none}
 .tariff-options-summ {width:100%; margin:0 0 1px 0; height:33px; background:#ddd; position:relative; overflow:hidden}
 .tariff-options-summ:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .tariff-options-summ-name {float:left; padding:0 0 0 18px; font-weight:bold; line-height:33px}
-.tariff-options-summ-price {float:right; padding:0 15px 0 0; line-height:33px; font-size:13px}
+.tariff-options-summ-price {float:right; line-height:33px; font-size:13px}
 .tariff-options-summ-price strong {font-size:18px}
+.tariff-options-summ-price span {display:inline-block; width:60px; text-align:left}
 .tariff-options-summ-price-tariff {text-decoration:line-through}
 
 .tariff-options-summ-tariff {display:none; width:100%; margin:0 0 12px 0; height:33px; background:#d1d8f0; position:relative; overflow:hidden}
 .tariff-options-summ-tariff:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .tariff-options-summ-tariff-name {float:left; padding:0 0 0 18px; font-weight:bold; line-height:33px}
-.tariff-options-summ-tariff-price {float:right; line-height:33px; font-size:13px; width:112px; text-align:right}
+.tariff-options-summ-tariff-price {float:right; line-height:33px; font-size:13px; padding-left:15px; text-align:right}
 .tariff-options-summ-tariff-price strong {font-size:18px}
+.tariff-options-summ-tariff-price span {display:inline-block; width:60px; text-align:left}
 .tariff-options-summ-tariff-economy {float:right; line-height:33px}
 
 .tariff-ctrl {width:100%; background:#f0f0ed}
