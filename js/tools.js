@@ -11,8 +11,16 @@
                 $('.advantages-tabs li.active').removeClass('active');
                 curLi.addClass('active');
 
-                $('.advantages-content').eq(curIndex).fadeOut();
-                $('.advantages-content').eq(newIndex).fadeIn();
+                $('.advantages-content').eq(curIndex).hide();
+                $('.advantages-content').eq(newIndex).find('.advantage').css({'opacity': 0, 'top': -100});
+                $('.advantages-content').eq(newIndex).show();
+                $('.advantages-content').eq(newIndex).find('.advantage').eq(0).animate({'opacity': 1, 'top': 0}, 300, function() {
+                    $('.advantages-content').eq(newIndex).find('.advantage').eq(1).animate({'opacity': 1, 'top': 0}, 300, function() {
+                        $('.advantages-content').eq(newIndex).find('.advantage').eq(2).animate({'opacity': 1, 'top': 0}, 300, function() {
+                            $('.advantages-content').eq(newIndex).find('.advantage').eq(3).animate({'opacity': 1, 'top': 0}, 300);
+                        });
+                    });
+                });
             }
             return false;
         });
@@ -50,8 +58,24 @@
         $('.tariff-option input:checked').parent().parent().parent().addClass('checked');
         $('.tariff-option').click(function() {
             var curRow = $(this);
-            curRow.toggleClass('checked');
-            curRow.find('input').prop('checked', curRow.hasClass('checked')).change();
+
+            if ($('.tafiffs-plans ul li.active').length > 0) {
+                if (curRow.hasClass('checked')) {
+                    $('.tariff-option').removeClass('checked');
+                    $('.tariff-option').find('input').prop('checked', false).change();
+                    $('.tariff-option').removeClass('checked-1 checked-2 checked-3 checked-4');
+                } else {
+                    $('.tariff-option').removeClass('checked');
+                    $('.tariff-option').find('input').prop('checked', false).change();
+                    $('.tariff-option').removeClass('checked-1 checked-2 checked-3 checked-4');
+                    curRow.addClass('checked');
+                    curRow.find('input').prop('checked', curRow.hasClass('checked')).change();
+                }
+            } else {
+                curRow.toggleClass('checked');
+                curRow.find('input').prop('checked', curRow.hasClass('checked')).change();
+            }
+
             $('.tafiffs-plans ul li').removeClass('disable active');
             $('.tariff-option').removeClass('checked-1 checked-2 checked-3 checked-4');
             recalcSumm();
