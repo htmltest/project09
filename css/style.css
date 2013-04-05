@@ -9,7 +9,7 @@ a:hover {color:#6172b1}
 
 img {border:none}
 
-.wrapper {min-width:1000px; background:url(../images/bg-top.png) no-repeat center top; position:relative}
+.wrapper {min-width:1000px; background:url(../images/bg-top.jpg) no-repeat center top; position:relative}
 .wrapper-inner {width:940px; margin:0 auto; padding:26px 0 29px 0}
 
 .header {height:206px; position:relative; background:url(../images/header.png); padding:36px 0 0 0}
@@ -168,8 +168,7 @@ img {border:none}
 .principles-item-3 {background:url(../images/principle-3.png) no-repeat center top}
 .principles-item-name {font:21px/29px "RexBold", arial, helvetica, sans-serif; padding:32px 0 0 0}
 .principles-item-name span {font-size:27px}
-.principles-item-name a {color:#4d8b80; text-decoration:none; border-bottom:2px solid #e1e0df}
-.principles-item-name a:hover {border-bottom:none; margin-bottom:2px}
+.principles-item-name strong {font-weight:normal; color:#4d8b80; border-bottom:2px solid #e1e0df}
 .principles-item-text {color:#635d58; line-height:19px; padding:15px 0 0 0}
 
 .areas {padding:72px 0 0 0; background:url(../images/section-sep-2.png) no-repeat center 36px}

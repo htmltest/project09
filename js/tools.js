@@ -91,6 +91,7 @@
         $('.tariffs form').submit(function() {
             $('.order-window-form-services').html($('.tariff-options').html());
             windowOpen($('.order-window').html());
+            $('.window input[name="phone"]').mask('(999) 999-9999');
             return false;
         });
 
